@@ -312,7 +312,7 @@ def setup_package():
               "it is eminently suited for such datasets.\n"
               "PyMVPA is truly free software (in every respect) and "
               "additionally requires nothing but free-software to run.",
-          setup_requires=['numpy'],
+          install_requires=['numpy', 'bleach', 'pygments'],
           # please maintain alphanumeric order
           packages=[ 'mvpa2',
                      'mvpa2.algorithms',
@@ -352,7 +352,7 @@ def setup_package():
                      'mvpa2.tests.badexternals',
                      'mvpa2.viz',
                    ],
-          install_requires=requires['core'],
+          requires=['scipy', 'nibabel'],
           data_files=[('mvpa2', [os.path.join('mvpa2', 'COMMIT_HASH')])]
                      + find_data_files(os.path.join('mvpa2', 'data'),
                                        '*.txt', '*.nii.gz', '*.rtc', 'README', '*.bin',
