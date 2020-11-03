@@ -352,7 +352,7 @@ def setup_package():
                      'mvpa2.tests.badexternals',
                      'mvpa2.viz',
                    ],
-          requires=['scipy', 'nibabel'],
+          requires=['scipy', 'nibabel', 'joblib'],
           data_files=[('mvpa2', [os.path.join('mvpa2', 'COMMIT_HASH')])]
                      + find_data_files(os.path.join('mvpa2', 'data'),
                                        '*.txt', '*.nii.gz', '*.rtc', 'README', '*.bin',
